@@ -11,7 +11,7 @@ import shutil
 import smtplib
 from telebot.types import LabeledPrice
 #python -mwebbrowser "http://localhost:8000/cgi-bin/get_id.py?id=3&day=49"
-token="552988765:AAF5ufTsnTP4wKSPd4rpKLeg4y-EF-bJoK0"#"520067503:AAGxM_atlDYN9FYOmgsJ7Wjid4K27OIEIGE"
+token=""
 
 bot = telebot.TeleBot(token)
 
