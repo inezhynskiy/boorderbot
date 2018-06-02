@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import sys, traceback, time, telebot, random, requests
 import xl
 import json
