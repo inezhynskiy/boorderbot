@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import sys, traceback, time, telebot, random, requests
 import xl
 import json
@@ -13,7 +11,7 @@ import shutil
 import smtplib
 from telebot.types import LabeledPrice
 #python -mwebbrowser "http://localhost:8000/cgi-bin/get_id.py?id=3&day=49"
-token=""
+token="552988765:AAF5ufTsnTP4wKSPd4rpKLeg4y-EF-bJoK0"#"520067503:AAGxM_atlDYN9FYOmgsJ7Wjid4K27OIEIGE"
 
 bot = telebot.TeleBot(token)
 
@@ -65,7 +63,7 @@ def process_commentary_step(message):
         bot.send_message(chat_id=message.chat.id, text=body, reply_markup=keyboard_)
         bot.register_next_step_handler(message, process_how_to_pay_step)
     else:
-        body = "Здравствуйте! Я официальный бот компании Nalog.nl B. V. У меня вы можете заказать налоговую декларацию 2017"
+        body = "Здраствуйте. У нас вы может заказать Налоговую декларацию 2017"
         
         keyboard_ = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
         button_1 = types.KeyboardButton(text="Заказать годовую декларацию 2017")
@@ -89,7 +87,7 @@ def process_how_to_pay_step(message):
         bot.send_message(chat_id=message.chat.id, text=body, reply_markup=hide_mark)
         bot.register_next_step_handler(message, process_name_step)
     else:
-        body = "Здравствуйте! Я официальный бот компании Nalog.nl B. V. У меня вы можете заказать налоговую декларацию 2017"
+        body = "Здраствуйте. У нас вы может заказать Налоговую декларацию 2017"
         
         keyboard_ = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
         button_1 = types.KeyboardButton(text="Заказать годовую декларацию 2017")
@@ -214,7 +212,7 @@ def process_end_step(message):
         
         bot.send_message(chat_id=message.chat.id, text=body, reply_markup=keyboard_)
     else:
-        body = "Здравствуйте! Я официальный бот компании Nalog.nl B. V. У меня вы можете заказать налоговую декларацию 2017"
+        body = "Здраствуйте. У нас вы может заказать Налоговую декларацию 2017"
         
         keyboard_ = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
         button_1 = types.KeyboardButton(text="Заказать годовую декларацию 2017")
@@ -244,7 +242,7 @@ def process_form_step(message):
         bot.send_message(chat_id=message.chat.id, text=body, reply_markup=keyboard_)
         bot.register_next_step_handler(message, process_for_who_step)
     else:
-        body = "Здравствуйте! Я официальный бот компании Nalog.nl B. V. У меня вы можете заказать налоговую декларацию 2017"
+        body = "Здраствуйте. У нас вы может заказать Налоговую декларацию 2017"
         
         keyboard_ = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
         button_1 = types.KeyboardButton(text="Заказать годовую декларацию 2017")
@@ -264,7 +262,7 @@ def process_for_who_step(message):
         
         q_text = list(user.question_list_scores)[0];
         
-        body = "У вас будет возможность оставить комментарий после ответов на все вопросы чек листа.\n\nОтветьте на вопрос:\n\n"+q_text
+        body = "Ответьте на вопрос:\n\n"+q_text
         
         keyboard_ = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
         button_1 = types.KeyboardButton(text="Да")
@@ -278,7 +276,7 @@ def process_for_who_step(message):
         bot.send_message(chat_id=message.chat.id, text=body, reply_markup=keyboard_)
         bot.register_next_step_handler(message, process_question_from_file_step)
     else:
-        body = "Здравствуйте! Я официальный бот компании Nalog.nl B. V. У меня вы можете заказать налоговую декларацию 2017"
+        body = "Здраствуйте. У нас вы может заказать Налоговую декларацию 2017"
         
         keyboard_ = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
         button_1 = types.KeyboardButton(text="Заказать годовую декларацию 2017")
@@ -338,7 +336,7 @@ def handle_docs(message):
 @bot.message_handler(func=lambda message: True)
 def check_text(message):
     if message.text.find("/start")>=0 or message.text.find("Назад")>=0:
-        body = "Здравствуйте! Я официальный бот компании Nalog.nl B. V. У меня вы можете заказать налоговую декларацию 2017"
+        body = "Здраствуйте. У нас вы может заказать Налоговую декларацию 2017"
         
         keyboard_ = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
         button_1 = types.KeyboardButton(text="Заказать годовую декларацию 2017")
